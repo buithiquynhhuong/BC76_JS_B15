@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./bootstrap_5.3/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container-fluid alert alert-info">
+    <h1 class="text-center">EXERCISE JS Function</h1>
+</div>
+<div class="d-flex align-items-start">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="ex1-tab" data-bs-toggle="pill" data-bs-target="#ex1"
+                type="button" role="tab"
+                aria-controls="v-pills-home" aria-selected="true">Exercise 1
+        </button>
+        <button class="nav-link" id="ex2-tab" data-bs-toggle="pill" data-bs-target="#ex2"
+                type="button" role="tab"
+                aria-controls="v-pills-profile" aria-selected="false">Exercise 2
+        </button>
+        <button class="nav-link" id="ex3-tab" data-bs-toggle="pill" data-bs-target="#ex3"
+                type="button" role="tab"
+                aria-controls="v-pills-messages" aria-selected="false">Exercise 3
+        </button>
+        <button class="nav-link" id="ex4-tab" data-bs-toggle="pill" data-bs-target="#ex4"
+                type="button" role="tab"
+                aria-controls="v-pills-settings" aria-selected="false">Exercise 4
+        </button>
+    </div>
+
+    <div class=" border-start" style="width: 90%">
+        <div class="tab-content m-auto" id="v-pills-tabContent">
+            <!--    bài 1-->
+            <div class="tab-pane fade show active " id="ex1" role="tabpanel"
+                 aria-labelledby="v-pills-home-tab">
+
+                <div class="container ">
+                    <div class="mb-3 mt-3 row">
+                        <h2 class="text-center">Calculate student scores</h2>
+                        <div class="col-4 mb-3 mt-3">
+                            <input type="number" class="form-control" name id="cutOffScore" aria-describedby="helpId"
+                                   placeholder="Please enter the cut-off score"/>
+                        </div>
+
+                        <div class="col-4">
+                            <select id="zoneSelect" class="form-select mb-3 mt-3 " aria-label="Default select example">
+                                <option selected>Zone</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-4">
+                            <select id="candidateSelect" class="form-select mb-3 mt-3 "
+                                    aria-label="Default select example">
+                                <option selected>Candidates</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="col-4">
+                            <input type="number" class="form-control" name id="score1"
+                                   aria-describedby="helpId"
+                                   placeholder="Please enter the score 1"/>
+                        </div>
+
+                        <div class="col-4">
+                            <input type="number" class="form-control" name id="score2" aria-describedby="helpId"
+                                   placeholder="Please enter the score 2"/>
+                        </div>
+
+                        <div class="col-4">
+                            <input type="number" class="form-control" name id="score3" aria-describedby="helpId"
+                                   placeholder="Please enter the score 3"/>
+                        </div>
+
+
+                    </div>
+                    <div class="d-flex justify-content-center my-4">
+                        <button type="button" class="btn btn-success d-block" id="calEx1">
+                            Calculate
+                        </button>
+                    </div>
+
+                    <h4 class="text-center">Result</h4>
+                    <div id="result1" class="alert alert-success w-100 mt-3 text-center" style="display: none"></div>
+                </div>
+
+            </div>
+            <!--  bài 2-->
+            <div class="tab-pane fade" id="ex2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+
+                <div class="container">
+                    <div class="mb-3 mt-3 ">
+                        <div class="row g-3">
+                            <h2 class="text-center">Calculate the electricity bill </h2>
+                            <div class="col-6">
+                                <input type="text" class="form-control" name id="fullName" aria-describedby="helpId"
+                                       placeholder="Please enter your full name "/>
+
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" name id="numElectric"
+                                       aria-describedby="helpId"
+                                       placeholder="Please enter number electricity "/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-success d-block" id="calEx2">
+                            Calculate Electricity
+                        </button>
+                    </div>
+
+                    <h4 class="text-center mt-2">Result</h4>
+                    <div id="result2" style="display:none;" class="alert alert-success w-100 mt-3 text-center"></div>
+                </div>
+
+            </div>
+            <!--                bài 3-->
+            <div class="tab-pane fade" id="ex3" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+
+                <div class="container">
+                    <h2 class="text-center">Calculate the total income after tax</h2>
+                    <div class="row">
+                        <div class="mb-3 mt-3 col-4">
+                            <input type="text" class="form-control" name id="nameTax" aria-describedby="helpId"
+                                   placeholder="Please enter your name"/>
+                        </div>
+
+                        <div class="mb-3 mt-3 col-4">
+                            <input type="number" class="form-control" name id="totalYear" aria-describedby="helpId"
+                                   placeholder="Please enter the amount of money in year"/>
+                        </div>
+
+                        <div class="mb-3 mt-3 col-4">
+                            <input type="number" class="form-control" name id="peopleDepend" aria-describedby="helpId"
+                                   placeholder="Please enter the dependencies peoples"/>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-success d-block" id="calEx3">
+                            Calculate Tax
+                        </button>
+                    </div>
+
+                    <h4 class="text-center mt-2">Result</h4>
+                    <div id="result3" class="alert alert-success w-100 mt-3 text-center" style="display: none"></div>
+                </div>
+
+            </div>
+
+
+            <!--   bài 4-->
+            <div class="tab-pane fade" id="ex4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+
+                <div class="container w-75">
+                    <div class="mb-3 mt-3 row">
+                        <h2 class="text-center">Calculate fee rent channel </h2>
+                        <div class="col-4">
+                            <select id="typeCustomers" class="form-select mb-3 mt-3 "
+                                    aria-label="Default select example">
+                                <option selected>Type</option>
+                                <option value="personal">Personal</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 mt-3 col-4">
+                            <input type="text" class="form-control" name id="codeNumber" aria-describedby="helpId"
+                                   placeholder="Please enter code number customers"/>
+                        </div>
+
+                        <div class="mb-3 mt-3 col-4">
+                            <input type="number" class="form-control" name id="channelPrime" aria-describedby="helpId"
+                                   placeholder="Please enter chanel numbers prime"/>
+                        </div>
+
+                        <div class="channelConnect mb-3 mt-3 col-4" style="display: none">
+                            <input type="number" class="form-control" name id="channelConnect" aria-describedby="helpId"
+                                   placeholder="Please enter connect numbers"/>
+                        </div>
+
+
+                    </div>
+                    <button type="button" class="btn btn-success d-block" id="calEx4">
+                        Calculate rent channel
+                    </button>
+                    <h4 class="text-center">Result</h4>
+                    <div id="result4" class="alert alert-success w-100 mt-3 text-center"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./script.js"></script>
+<script src="./bootstrap_5.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
